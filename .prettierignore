@@ -3,3 +3,8 @@ build
 coverage
 node_modules
 .next
+
+*.json
+*.md
+*.mjs
+.prettierrc

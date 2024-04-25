@@ -1,5 +1,7 @@
 ## Welcome to Fishing Adventure :fishing_pole_and_fish:
 
+App about fishing
+
 ## Getting Started
 
 First, run the development server:

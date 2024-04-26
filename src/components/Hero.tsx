@@ -1,12 +1,11 @@
-export const Hero = () => {
+interface HeroProps {
+    children: React.ReactNode
+}
+export const Hero = ({ children }: HeroProps) => {
     return (
-        <div className="hero min-h-screen bg-base-200">
-            <div className="hero-content text-center">
-                <div className="max-w-md">
-                    <h1 className="text-5xl font-bold">Hello there</h1>
-                    <p className="py-6">Welcome to fishing adventure</p>
-                    <button className="btn btn-primary">Get Started</button>
-                </div>
+        <div className="hero min-h-screen bg-primary-content">
+            <div className="hero-content w-screen flex flex-wrap">
+                {children}
             </div>
         </div>
     )

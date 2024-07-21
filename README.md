@@ -4,7 +4,23 @@ App about fishing
 
 ## Getting Started
 
-First, run the development server:
+To start local mongo db instance run:
+
+```bash
+docker-compose up db -d
+```
+
+
+Add `.env.local` file to the root of the project with the following content:
+
+```bash
+MONGODB_URI=mongodb://localhost:27017/fishing-adventure
+```
+
+Then, install dependencies:
+
+```bash
+Then, run the development server:
 
 ```bash
 npm run dev

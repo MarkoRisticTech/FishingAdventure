@@ -4,6 +4,8 @@ import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
+import { NextAuthProvider } from '@/app/Providers'
+import React from 'react'
 
 const roboto = Roboto({
     weight: '400',
@@ -23,9 +25,11 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={roboto.className}>
-                <Navbar />
-                {children}
-                <Footer />
+                <NextAuthProvider>
+                    <Navbar />
+                    {children}
+                    <Footer />
+                </NextAuthProvider>
             </body>
         </html>
     )

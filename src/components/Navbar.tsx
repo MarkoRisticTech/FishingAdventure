@@ -1,5 +1,9 @@
 'use client'
+
 import { ChangeEvent, useEffect, useState } from 'react'
+import Link from 'next/link'
+
+import { UserInfo } from '@/components/UserInfo'
 
 export const Navbar = () => {
     const [theme, setTheme] = useState(
@@ -28,9 +32,12 @@ export const Navbar = () => {
     return (
         <div className="navbar bg-primary text-primary-content px-4">
             <div className="flex-1">
-                <a className="btn btn-ghost text-xl">Fishing Adventure</a>
+                <Link href="/" className="btn btn-ghost text-xl">
+                    Fishing Adventure
+                </Link>
             </div>
             <div className="flex-none">
+                <UserInfo />
                 <label className="swap swap-rotate">
                     <input
                         type="checkbox"

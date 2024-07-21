@@ -1,7 +1,31 @@
+'use client'
+
+import { useSession } from 'next-auth/react'
+
 import { Hero } from '@/components/Hero'
 import { Card } from '@/components/Card'
+import { LoginForm } from '@/components/LoginForm'
+import { Loading } from '@/components/Loading'
 
 export default function Home() {
+    const { status } = useSession()
+
+    if (status === 'unauthenticated') {
+        return (
+            <Hero>
+                <LoginForm />
+            </Hero>
+        )
+    }
+
+    if (status === 'loading') {
+        return (
+            <Hero>
+                <Loading />
+            </Hero>
+        )
+    }
+
     return (
         <Hero>
             <Card

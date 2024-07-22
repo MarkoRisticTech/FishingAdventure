@@ -1,6 +1,7 @@
 import '../../styles/globals.css'
 
 import type { Metadata } from 'next'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { Roboto } from 'next/font/google'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
@@ -31,6 +32,7 @@ export default function RootLayout({
                     <Footer />
                 </NextAuthProvider>
             </body>
+            <GoogleAnalytics gaId="G-7793CYE767" />
         </html>
     )
 }

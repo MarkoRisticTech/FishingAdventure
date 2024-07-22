@@ -32,12 +32,9 @@ export const Navbar = () => {
     return (
         <div className="navbar bg-primary text-primary-content px-4">
             <div className="flex-1">
-                <Link href="/" className="btn btn-ghost text-xl">
+                <Link href="/" className="p-2 text-xl">
                     Fishing Adventure
                 </Link>
-            </div>
-            <div className="flex-none">
-                <UserInfo />
                 <label className="swap swap-rotate">
                     <input
                         type="checkbox"
@@ -60,6 +57,7 @@ export const Navbar = () => {
                     </svg>
                 </label>
             </div>
+            <UserInfo />
         </div>
     )
 }

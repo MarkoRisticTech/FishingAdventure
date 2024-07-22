@@ -12,11 +12,8 @@ export const UserInfo = () => {
 
     return (
         <div className="relative">
-            <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="avatar cursor-pointer"
-            >
-                <div className="rounded-full w-10 h-10 m-1">
+            <button onClick={() => setIsOpen(!isOpen)} className="avatar">
+                <div className="rounded-full w-10">
                     <Image
                         src={session?.user?.image || '/userImage'}
                         alt="User"
@@ -28,7 +25,7 @@ export const UserInfo = () => {
             </button>
 
             {isOpen && (
-                <div className="absolute right-0 mt-2 w-64 rounded-md glass ring-1 ring-black ring-opacity-5 z-50">
+                <div className="absolute top-14 right-0 w-64 rounded-md glass z-50">
                     <div
                         className="py-1"
                         role="menu"
